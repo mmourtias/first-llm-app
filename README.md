@@ -13,6 +13,7 @@ A collection of Python scripts exploring core LLM engineering concepts.
 - `structured.py` — Structured JSON output extraction from text
 - `prompt_engineering.py` — Comparison of bad vs good prompts
 - `error_handling.py` — Handling API errors gracefully with try/except
+- `code_reviewer.py` — Interactive CLI tool that reviews Python code and suggests improvements
 
 ## Tech Stack
 
@@ -28,3 +29,11 @@ A collection of Python scripts exploring core LLM engineering concepts.
 4. Install dependencies: `pip install groq python-dotenv`
 5. Create `.env` file with your Groq API key: `GROQ_API_KEY=your_key_here`
 6. Run any script: `python main.py`
+
+## Usage — Code Reviewer
+
+```bash
+python code_reviewer.py
+```
+
+Paste your Python code and press Enter twice to get a review.
