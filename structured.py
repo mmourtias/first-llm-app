@@ -7,6 +7,8 @@ load_dotenv()
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
+# Structured output: αναγκάζουμε το μοντέλο να επιστρέφει πάντα JSON
+# ώστε να μπορούμε να το επεξεργαστούμε προγραμματιστικά (π.χ. data["name"])
 response = client.chat.completions.create(
     model="llama-3.3-70b-versatile",
     messages=[

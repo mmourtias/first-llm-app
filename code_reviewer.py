@@ -32,6 +32,8 @@ while True:
     print("Εσύ (επικόλλησε κώδικα και πάτα Enter δύο φορές):")
     lines = []
     quit_requested = False
+    # Διαβάζει γραμμή-γραμμή μέχρι ο χρήστης να πατήσει Enter σε κενή γραμμή
+    # Έτσι μπορεί να επικολλήσει πολλαπλές γραμμές κώδικα
     while True:
         line = input()
         if line.lower() == "quit":
@@ -44,6 +46,7 @@ while True:
     if quit_requested:
         break
 
+    # Ενώνει τις γραμμές σε ένα string με αλλαγές γραμμής
     user_input = "\n".join(lines)
 
     messages.append({"role":"user", "content": user_input})
