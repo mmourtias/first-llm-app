@@ -8,8 +8,9 @@ client = ChatGroq(
     model="llama-3.3-70b-versatile"
 )
 
-response = client.invoke("Ποια είναι η ηλικία της Ελλάδας;")
+response = client.invoke("Τι είναι το machine learning;")
 
+print("=== Πρώτη απάντηση ===")
 print(response.content)
 
 
@@ -22,4 +23,6 @@ messages = [
 ]
 
 response = client.invoke(messages)
+
+print("=== Δεύτερη απάντηση ===")
 print(response.content)
