@@ -10,7 +10,7 @@ client = ChatGroq(
 ) 
 
 
-
+# Ο parser μετατρέπει την απάντηση σε string
 parser = StrOutputParser()
 
 template = ChatPromptTemplate.from_messages([
