@@ -4,7 +4,7 @@ Learning project for LLM engineering using the Groq API and Llama 3.
 
 ## What it does
 
-A collection of Python scripts exploring core LLM engineering concepts — from basic API calls to LangChain pipelines.
+A collection of Python scripts exploring core LLM engineering concepts — from basic API calls to RAG pipelines.
 
 ## Scripts
 
@@ -21,11 +21,17 @@ A collection of Python scripts exploring core LLM engineering concepts — from 
 - `prompt_template.py` — Dynamic prompt templates with variables using ChatPromptTemplate
 - `output_parsers.py` — Parsing model output with StrOutputParser and LCEL chains
 
+### Embeddings & RAG
+- `embeddings_intro.py` — Text embeddings with HuggingFace, Chroma vector DB, semantic search
+- `rag_intro.py` — RAG pipeline: document retrieval + LLM generation with context
+
 ## Tech Stack
 
 - Python 3.14
 - Groq API (Llama 3.3-70B)
 - LangChain + langchain-groq
+- HuggingFace sentence-transformers (all-MiniLM-L6-v2)
+- Chroma vector database
 - python-dotenv
 
 ## Setup
@@ -33,7 +39,7 @@ A collection of Python scripts exploring core LLM engineering concepts — from 
 1. Clone the repo
 2. Create virtual environment: `python3 -m venv venv`
 3. Activate: `source venv/bin/activate`
-4. Install dependencies: `pip install groq python-dotenv langchain langchain-groq`
+4. Install dependencies: `pip install groq python-dotenv langchain langchain-groq langchain-chroma langchain-huggingface sentence-transformers`
 5. Create `.env` file with your Groq API key: `GROQ_API_KEY=your_key_here`
 6. Run any script: `python main.py`
 
