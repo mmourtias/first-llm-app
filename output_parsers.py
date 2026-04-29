@@ -20,7 +20,7 @@ template = ChatPromptTemplate.from_messages([
 
 chain = template | client | parser
 
-result = chain.invoke({"subject": "Python programming",
+result = chain.invoke({"subject": "Python language",
     "question": "Ποιες είναι οι 3 πιο χρήσιμες built-in functions;"
 })
 
